@@ -1,0 +1,14 @@
+{
+    "mysql": {
+        "table": "live_warehouse_v2.address_codes",
+        "schema": "schema_history_hh"
+    },
+    "hbase": {
+        "timestamp": -1,
+        "zookeeper_quorum": ["localhost"],
+        "table": "hh_address_codes"
+    },
+    "hive": {
+        "table": "live_warehouse_v2.test_address_codes"
+    }
+}
