@@ -9,6 +9,6 @@
         "table": "hh_address_codes"
     },
     "hive": {
-        "table": "live_warehouse_v2.test_address_codes"
+        "table": "live_warehouse_v2.mysql_address_codes"
     }
 }
