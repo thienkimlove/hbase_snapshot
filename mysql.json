@@ -1,14 +1,14 @@
 {
     "mysql": {
-        "table": "live_warehouse_v2.address_codes",
-        "schema": "schema_history_hh"
+        "table": "live_warehouse_v2.exports",
+        "schema": "schema_history_prod"
     },
     "hbase": {
-        "timestamp": -1,
+        "timestamp": 1510301487639403,
         "zookeeper_quorum": ["localhost"],
-        "table": "hh_address_codes"
+        "table": "prod_exports"
     },
     "hive": {
-        "table": "live_warehouse_v2.mysql_address_codes"
+        "table": "live_warehouse_v2.mysql_exports"
     }
 }

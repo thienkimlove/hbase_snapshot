@@ -114,6 +114,16 @@ object HBaseSnapshotter {
     val scan = new Scan()
     if (settings.hbaseTimestamp() > -1) scan.setTimeRange(0, settings.hbaseTimestamp())
 
+    logger.debug(settings.hbaseTimestamp())
+
+    val df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+    import java.util.TimeZone
+    df.setTimeZone(TimeZone.getTimeZone("GMT+7"))
+    val date = df.format(settings.hbaseTimestamp()/1000)
+    logger.debug(date)
+
+    //System.exit(1)
+
     val hbaseRDD = hbc.hbaseRDD(
       TableName.valueOf(settings.hbaseTable()),
       scan,
